@@ -89,7 +89,7 @@ export default function AdminDashboard() {
                 {/* Mock Pie Chart */}
                 <div className="bg-white p-6 rounded-lg border border-gray-100 shadow-sm min-h-[300px] flex flex-col">
                     <h3 className="text-sm font-medium text-gray-800 mb-6">Product Distribution</h3>
-                    <div className="flex-1 flex items-center justify-center gap-8">
+                    <div className="flex-1 flex flex-col sm:flex-row items-center justify-center gap-8">
                         <div
                             className="w-40 h-40 rounded-full"
                             style={{

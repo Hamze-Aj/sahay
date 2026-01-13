@@ -2,9 +2,10 @@
 import AdminSidebar from "@/components/Admin/AdminSidebar";
 import { usePathname, useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function AdminLayout({ children }) {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const pathname = usePathname();
     const { user, loading } = useAuth();
     const router = useRouter();
@@ -31,23 +32,29 @@ export default function AdminLayout({ children }) {
 
     return (
         <div className="min-h-screen bg-white">
-            <AdminSidebar />
+            <AdminSidebar
+                isOpen={isSidebarOpen}
+                onClose={() => setIsSidebarOpen(false)}
+            />
 
-            <div className="pl-64">
+            <div className="lg:pl-64 min-h-screen flex flex-col transition-all duration-300">
                 {/* Top Bar */}
-                <header className="h-16 border-b border-gray-100 flex items-center justify-between px-8 bg-white sticky top-0 z-20">
+                <header className="h-16 border-b border-gray-100 flex items-center justify-between px-4 lg:px-8 bg-white sticky top-0 z-20">
                     <div className="flex items-center gap-4">
-                        <button className="lg:hidden p-1 text-gray-500">
+                        <button
+                            className="lg:hidden p-1 text-gray-500 hover:bg-gray-50 rounded"
+                            onClick={() => setIsSidebarOpen(true)}
+                        >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
                         </button>
                         <h2 className="text-lg font-bold text-gray-800">{getTitle()}</h2>
                     </div>
                     <div className="flex items-center gap-4">
-                        <span className="text-xs text-[#00A651] border border-[#00A651] px-2 py-1 rounded-full bg-green-50">Shariah Compliant</span>
+                        <span className="text-xs text-[#00A651] border border-[#00A651] px-2 py-1 rounded-full bg-green-50 hidden sm:inline-block">Shariah Compliant</span>
                     </div>
                 </header>
 
-                <main className="p-8 bg-gray-50/50 min-h-[calc(100vh-64px)]">
+                <main className="flex-1 p-4 lg:p-8 bg-gray-50/50">
                     {children}
                 </main>
             </div>
