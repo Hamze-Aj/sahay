@@ -120,9 +120,11 @@ export default function Navigation() {
           <div className="flex items-center gap-4">
             {/* Sign In Button (Hidden on Mobile) */}
             <div className="hidden lg:block">
-              <Button variant="green" className="px-6 py-2.5 text-sm">
-                Sign In / Register
-              </Button>
+              <a href="/login">
+                <Button variant="green" className="px-6 py-2.5 text-sm">
+                  Sign In / Register
+                </Button>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -176,9 +178,11 @@ export default function Navigation() {
             ))}
 
             <div className="pt-4 pb-8">
-              <Button variant="green" className="w-full py-3 justify-center text-base">
-                Sign In / Register
-              </Button>
+              <a href="/login" className="flex w-full">
+                <Button variant="green" className="w-full py-3 justify-center text-base">
+                  Sign In / Register
+                </Button>
+              </a>
             </div>
           </div>
         </div>

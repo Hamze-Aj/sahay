@@ -11,11 +11,15 @@ export const metadata = {
   description: "Rays Microfinance Institution provides Shariah-compliant financial solutions to individuals, SMEs, and communities across Ethiopia and Somalia.",
 };
 
+import { AuthProvider } from "@/context/AuthContext";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} antialiased`}>
-        {children}
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
