@@ -19,7 +19,7 @@ export default function TrustedPartners() {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-[#F8F8F8]">
+    <section id="our-reach" className="py-16 lg:py-24 bg-[#F8F8F8]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -313,10 +313,10 @@ export default function TrustedPartners() {
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg className="w-7 h-7 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 2.18L19.82 8 12 11.82 4.18 8 12 4.18z"/>
-                    <path d="M4 9.5v7.5c0 4.5 3.5 8.5 8 9.5 4.5-1 8-5 8-9.5V9.5l-8-4-8 4z"/>
-                    <circle cx="7" cy="6" r="1"/>
-                    <circle cx="17" cy="6" r="1"/>
+                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 2.18L19.82 8 12 11.82 4.18 8 12 4.18z" />
+                    <path d="M4 9.5v7.5c0 4.5 3.5 8.5 8 9.5 4.5-1 8-5 8-9.5V9.5l-8-4-8 4z" />
+                    <circle cx="7" cy="6" r="1" />
+                    <circle cx="17" cy="6" r="1" />
                   </svg>
                 </div>
                 <div className="flex-1">
@@ -355,8 +355,8 @@ export default function TrustedPartners() {
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg className="w-7 h-7 text-black" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
-                    <path d="M12 9l-1 1v2h2v-2l-1-1z" fill="#FFC107"/>
+                    <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+                    <path d="M12 9l-1 1v2h2v-2l-1-1z" fill="#FFC107" />
                   </svg>
                 </div>
                 <div className="flex-1">
@@ -376,9 +376,9 @@ export default function TrustedPartners() {
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
-                    <rect x="4" y="6" width="16" height="3" fill="#EF4444" rx="1"/>
-                    <rect x="4" y="10" width="16" height="3" fill="#3B82F6" rx="1"/>
-                    <rect x="4" y="14" width="16" height="3" fill="#10B981" rx="1"/>
+                    <rect x="4" y="6" width="16" height="3" fill="#EF4444" rx="1" />
+                    <rect x="4" y="10" width="16" height="3" fill="#3B82F6" rx="1" />
+                    <rect x="4" y="14" width="16" height="3" fill="#10B981" rx="1" />
                   </svg>
                 </div>
                 <div className="flex-1">
@@ -437,9 +437,9 @@ export default function TrustedPartners() {
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg className="w-7 h-7 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-                    <path d="M8 8c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2V8z" fill="#F97316"/>
-                    <path d="M6 10h12M6 12h12M6 14h12" stroke="currentColor" strokeWidth="1.5"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                    <path d="M8 8c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2V8z" fill="#F97316" />
+                    <path d="M6 10h12M6 12h12M6 14h12" stroke="currentColor" strokeWidth="1.5" />
                   </svg>
                 </div>
                 <div className="flex-1">
@@ -543,8 +543,8 @@ export default function TrustedPartners() {
             <div className="flex flex-col items-center text-center">
               <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4">
                 <svg className="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 2.18L19.82 8 12 11.82 4.18 8 12 4.18z"/>
-                  <path d="M4 9.5v7.5c0 4.5 3.5 8.5 8 9.5 4.5-1 8-5 8-9.5V9.5l-8-4-8 4z"/>
+                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 2.18L19.82 8 12 11.82 4.18 8 12 4.18z" />
+                  <path d="M4 9.5v7.5c0 4.5 3.5 8.5 8 9.5 4.5-1 8-5 8-9.5V9.5l-8-4-8 4z" />
                 </svg>
               </div>
               <p className="text-base text-[#333333] font-medium">AAOIFI Member</p>

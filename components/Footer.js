@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#020617] text-white pt-16 pb-8 border-t border-gray-800">
+    <footer id="contact" className="bg-[#020617] text-white pt-16 pb-8 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Top Section: Brand & Links */}
@@ -55,13 +55,14 @@ export default function Footer() {
           {/* Links Columns (Right) */}
           <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-4 gap-8">
             {/* Solutions */}
+            {/* Solutions */}
             <div>
               <h4 className="text-[#FFC107] font-semibold mb-6">Solutions</h4>
               <ul className="space-y-4 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Personal Financing</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Business & SME</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Agricultural Finance</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Women's Banking</a></li>
+                <li><a href="/#financial-services" className="hover:text-white transition-colors">Personal Financing</a></li>
+                <li><a href="/#business-sme" className="hover:text-white transition-colors">Business & SME</a></li>
+                <li><a href="/#agri-finance" className="hover:text-white transition-colors">Agricultural Finance</a></li>
+                <li><a href="/#agri-finance" className="hover:text-white transition-colors">Women's Banking</a></li>
               </ul>
             </div>
 
@@ -69,10 +70,10 @@ export default function Footer() {
             <div>
               <h4 className="text-[#FFC107] font-semibold mb-6">Islamic Finance</h4>
               <ul className="space-y-4 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Shariah Framework</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Knowledge Center</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Social Responsibility</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Product Certifications</a></li>
+                <li><a href="/#shariah-framework" className="hover:text-white transition-colors">Shariah Framework</a></li>
+                <li><a href="/#knowledge-center" className="hover:text-white transition-colors">Knowledge Center</a></li>
+                <li><a href="/#social-responsibility" className="hover:text-white transition-colors">Social Responsibility</a></li>
+                <li><a href="/#shariah-framework" className="hover:text-white transition-colors">Product Certifications</a></li>
               </ul>
             </div>
 
@@ -80,11 +81,11 @@ export default function Footer() {
             <div>
               <h4 className="text-[#FFC107] font-semibold mb-6">Company</h4>
               <ul className="space-y-4 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Our Reach</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Success Stories</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Newsroom</a></li>
+                <li><a href="/#company-profile" className="hover:text-white transition-colors">About Us</a></li>
+                <li><a href="/#our-reach" className="hover:text-white transition-colors">Our Reach</a></li>
+                <li><a href="/#success-stories" className="hover:text-white transition-colors">Success Stories</a></li>
+                <li><a href="/#" className="hover:text-white transition-colors">Careers</a></li>
+                <li><a href="/#" className="hover:text-white transition-colors">Newsroom</a></li>
               </ul>
             </div>
 
@@ -92,11 +93,11 @@ export default function Footer() {
             <div>
               <h4 className="text-[#FFC107] font-semibold mb-6">Support</h4>
               <ul className="space-y-4 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Branch Locator</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">FAQs</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Grievance Redressal</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Feedback</a></li>
+                <li><a href="/#contact" className="hover:text-white transition-colors">Contact Us</a></li>
+                <li><a href="/#our-reach" className="hover:text-white transition-colors">Branch Locator</a></li>
+                <li><a href="/#knowledge-center" className="hover:text-white transition-colors">FAQs</a></li>
+                <li><a href="/#contact" className="hover:text-white transition-colors">Grievance Redressal</a></li>
+                <li><a href="/#contact" className="hover:text-white transition-colors">Feedback</a></li>
               </ul>
             </div>
           </div>

@@ -50,7 +50,7 @@ export default function FinancialServices() {
   ];
 
   return (
-    <section className="bg-[#F8F8F8] py-16 lg:py-24">
+    <section id="financial-services" className="bg-[#F8F8F8] py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -61,7 +61,7 @@ export default function FinancialServices() {
             Institutional-grade banking solutions designed for individuals, businesses, and institutions
           </p>
         </div>
-        
+
         {/* Service Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (

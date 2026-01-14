@@ -1,6 +1,6 @@
 export default function RaysStory() {
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section id="company-profile" className="py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* About Us Button */}
         <div className="text-center mb-6">
@@ -22,8 +22,12 @@ export default function RaysStory() {
         {/* Central Image */}
         <div className="mb-16">
           <div className="rounded-xl overflow-hidden shadow-lg">
-            <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-400">The Rays Story Image</span>
+            <div className="w-full h-96 bg-gray-200 relative">
+              <img
+                src="https://picsum.photos/seed/rays-story/1200/600"
+                alt="The Rays Story"
+                className="w-full h-full object-cover block"
+              />
             </div>
           </div>
         </div>

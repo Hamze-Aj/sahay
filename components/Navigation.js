@@ -34,32 +34,32 @@ export default function Navigation() {
       name: 'Solutions',
       hasDropdown: true,
       items: [
-        'Personal Financing',
-        'Business & SME',
-        'Agricultural Finance',
-        "Women's Banking"
+        { label: 'Personal Financing', href: '/#financial-services' },
+        { label: 'Business & SME', href: '/#business-sme' },
+        { label: 'Agricultural Finance', href: '/#agri-finance' },
+        { label: "Women's Banking", href: '/#agri-finance' }
       ]
     },
     {
       name: 'Islamic Finance',
       hasDropdown: true,
       items: [
-        'Shariah Framework',
-        'Knowledge Center',
-        'Social Responsibility'
+        { label: 'Shariah Framework', href: '/#shariah-framework' },
+        { label: 'Knowledge Center', href: '/#knowledge-center' },
+        { label: 'Social Responsibility', href: '/#social-responsibility' }
       ]
     },
-    { name: 'Sahaypay', hasDropdown: false },
+    { name: 'Sahaypay', hasDropdown: false, href: '/#sahaypay' },
     {
       name: 'About Us',
       hasDropdown: true,
       items: [
-        'Company Profile',
-        'Our Reach',
-        'Success Stories'
+        { label: 'Company Profile', href: '/#company-profile' },
+        { label: 'Our Reach', href: '/#our-reach' },
+        { label: 'Success Stories', href: '/#success-stories' }
       ]
     },
-    { name: 'Contact', hasDropdown: false },
+    { name: 'Contact', hasDropdown: false, href: '/#contact' },
   ];
 
   return (
@@ -86,28 +86,35 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2" ref={dropdownRef}>
             {menuItems.map((item) => (
               <div key={item.name} className="relative group">
-                <button
-                  onClick={() => item.hasDropdown ? toggleDropdown(item.name) : null}
-                  className="flex items-center gap-1.5 text-[#333333] text-sm font-normal hover:text-[#6A3E9F] transition-colors py-2 outline-none focus:outline-none"
-                >
-                  {item.name}
-                  {item.hasDropdown && (
+                {item.hasDropdown ? (
+                  <button
+                    onClick={() => toggleDropdown(item.name)}
+                    className="flex items-center gap-1.5 text-[#333333] text-sm font-normal hover:text-[#6A3E9F] transition-colors py-2 outline-none focus:outline-none"
+                  >
+                    {item.name}
                     <svg className={`w-3 h-3 transition-transform duration-200 ${openDropdown === item.name ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
-                  )}
-                </button>
+                  </button>
+                ) : (
+                  <a
+                    href={item.href}
+                    className="flex items-center gap-1.5 text-[#333333] text-sm font-normal hover:text-[#6A3E9F] transition-colors py-2"
+                  >
+                    {item.name}
+                  </a>
+                )}
 
                 {/* Dropdown Menu */}
                 {item.hasDropdown && openDropdown === item.name && (
                   <div className="absolute top-full left-0 mt-1 w-56 bg-white border border-gray-100 rounded-lg shadow-lg py-2 flex flex-col z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                     {item.items.map((subItem) => (
                       <a
-                        key={subItem}
-                        href="#"
+                        key={subItem.label}
+                        href={subItem.href}
                         className="px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#6A3E9F] transition-colors text-left"
                       >
-                        {subItem}
+                        {subItem.label}
                       </a>
                     ))}
                   </div>
@@ -152,24 +159,37 @@ export default function Navigation() {
           <div className="flex flex-col space-y-4">
             {menuItems.map((item) => (
               <div key={item.name} className="border-b border-gray-100 pb-4">
-                <div
-                  className="flex items-center justify-between text-lg font-medium text-[#333333] py-2"
-                  onClick={() => item.hasDropdown && toggleDropdown('mobile-' + item.name)}
-                >
-                  {item.name}
-                  {item.hasDropdown && (
+                {item.hasDropdown ? (
+                  <div
+                    className="flex items-center justify-between text-lg font-medium text-[#333333] py-2"
+                    onClick={() => toggleDropdown('mobile-' + item.name)}
+                  >
+                    {item.name}
                     <svg className={`w-5 h-5 transition-transform ${openDropdown === 'mobile-' + item.name ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
-                  )}
-                </div>
+                  </div>
+                ) : (
+                  <a
+                    href={item.href}
+                    className="flex items-center justify-between text-lg font-medium text-[#333333] py-2"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                )}
 
                 {/* Mobile Submenu */}
                 {item.hasDropdown && openDropdown === 'mobile-' + item.name && (
                   <div className="flex flex-col mt-2 pl-4 space-y-3">
                     {item.items.map((subItem) => (
-                      <a key={subItem} href="#" className="text-gray-500 hover:text-[#4CAF50] text-base">
-                        {subItem}
+                      <a
+                        key={subItem.label}
+                        href={subItem.href}
+                        className="text-gray-500 hover:text-[#4CAF50] text-base"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {subItem.label}
                       </a>
                     ))}
                   </div>

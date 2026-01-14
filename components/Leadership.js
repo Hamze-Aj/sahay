@@ -5,56 +5,56 @@ export default function Leadership() {
       title: 'Chief Executive Officer',
       description: 'Ahmed brings over 20 years of experience in Islamic banking and financial services, leading Rays Microfinance\'s strategic vision and growth initiatives.',
       tag: 'Executive Leadership',
-      image: '/placeholder-leader-1.jpg' // Placeholder - replace with actual image
+      image: 'https://picsum.photos/seed/ahmed/400/400'
     },
     {
       name: 'Fatima Abdi Mohamed',
       title: 'Chief Financial Officer',
       description: 'Fatima oversees all financial operations, ensuring robust fiscal management and compliance across all Rays Microfinance operations.',
       tag: 'Executive Leadership',
-      image: '/placeholder-leader-2.jpg' // Placeholder - replace with actual image
+      image: 'https://picsum.photos/seed/fatima/400/400'
     },
     {
       name: 'Ibrahim Yusuf Ali',
       title: 'Director of Sahaypay',
       description: 'Ibrahim leads Sahaypay, Rays\' digital wallet platform serving over 1 million users across Ethiopia with innovative payment solutions.',
       tag: 'Digital Banking Leadership',
-      image: '/placeholder-leader-3.jpg' // Placeholder - replace with actual image
+      image: 'https://picsum.photos/seed/ibrahim/400/400'
     },
     {
       name: 'Dr. Aisha Nur Hassan',
       title: 'Chief Technology Officer',
       description: 'Dr. Aisha leads all technology initiatives at Rays, overseeing core banking systems, digital platforms, and infrastructure development.',
       tag: 'Technology Leadership',
-      image: '/placeholder-leader-4.jpg' // Placeholder - replace with actual image
+      image: 'https://picsum.photos/seed/aisha/400/400'
     },
     {
       name: 'Sheikh Mohammed Al-Amin',
       title: 'Chairman, Shariah Supervisory Board',
       description: 'Sheikh Mohammed chairs Rays\' Shariah Supervisory Board, ensuring all products and services comply with Islamic principles and ethical standards.',
       tag: 'Shariah Governance',
-      image: '/placeholder-leader-5.jpg' // Placeholder - replace with actual image
+      image: 'https://picsum.photos/seed/mohammed/400/400'
     },
     {
       name: 'Yasmin Abdurahman',
       title: 'Head of Women\'s Banking',
       description: 'Yasmin leads Rays\' Women\'s Banking division, empowering female entrepreneurs and promoting financial inclusion for women across Ethiopia.',
       tag: 'Social Impact Leadership',
-      image: '/placeholder-leader-6.jpg' // Placeholder - replace with actual image
+      image: 'https://picsum.photos/seed/yasmin/400/400'
     },
     {
       name: 'Abdullahi Omar Hussein',
       title: 'Regional Director - Somali Region',
       description: 'Abdullahi leads Rays\' operations across the Somali region, managing branch networks and expanding financial services to underserved communities.',
       tag: 'Regional Leadership',
-      image: '/placeholder-leader-7.jpg' // Placeholder - replace with actual image
+      image: 'https://picsum.photos/seed/abdullahi/400/400'
     },
     {
       name: 'Samuel Tekle Gebre',
       title: 'Chief Risk Officer',
       description: 'Samuel oversees enterprise risk management, credit risk assessment, and regulatory compliance across all Rays Microfinance operations.',
       tag: 'Risk & Compliance',
-      image: '/placeholder-leader-8.jpg' // Placeholder - replace with actual image
+      image: 'https://picsum.photos/seed/samuel/400/400'
     }
   ];
 
@@ -83,10 +83,13 @@ export default function Leadership() {
               {/* Image Container with Overlay Tag */}
               <div className="relative h-64 bg-gray-200">
                 {/* Placeholder for image */}
-                <div className="w-full h-full flex items-center justify-center bg-gray-100">
-                  <svg className="w-24 h-24 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
+                {/* Image */}
+                <div className="w-full h-full relative">
+                  <img
+                    src={leader.image}
+                    alt={leader.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 {/* Overlay Tag */}
                 <div className="absolute top-4 right-4">

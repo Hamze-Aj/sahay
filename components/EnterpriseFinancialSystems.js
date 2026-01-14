@@ -142,7 +142,7 @@ export default function EnterpriseFinancialSystems() {
   ];
 
   return (
-    <section className="bg-white py-16 lg:py-24">
+    <section id="business-sme" className="bg-white py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -158,7 +158,7 @@ export default function EnterpriseFinancialSystems() {
             Our technology stack combines cutting-edge innovation with institutional reliability, powering secure, scalable, and efficient financial operations
           </p>
         </div>
-        
+
         {/* System Cards */}
         <div className="space-y-6 lg:space-y-8 mb-16">
           {systems.map((system, index) => (
@@ -174,7 +174,7 @@ export default function EnterpriseFinancialSystems() {
                       {system.description}
                     </p>
                   </div>
-                  
+
                   {/* Key Metrics */}
                   <div className="space-y-4">
                     {system.metrics.map((metric, metricIndex) => (
@@ -185,7 +185,7 @@ export default function EnterpriseFinancialSystems() {
                     ))}
                   </div>
                 </div>
-                
+
                 {/* Right Column - White Background */}
                 <div className="bg-white p-8 lg:p-12">
                   <div className="flex items-center gap-2 mb-6">
@@ -194,7 +194,7 @@ export default function EnterpriseFinancialSystems() {
                     </svg>
                     <h3 className="text-[#333333] text-xl font-bold">Key Capabilities</h3>
                   </div>
-                  
+
                   {/* Capabilities Grid */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {system.capabilities.map((capability, capIndex) => (
@@ -224,7 +224,7 @@ export default function EnterpriseFinancialSystems() {
                 Bank-grade security protecting every transaction and customer interaction
               </p>
             </div>
-            
+
             {/* Security Feature Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {securityFeatures.map((feature, index) => (

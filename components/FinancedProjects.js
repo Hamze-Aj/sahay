@@ -24,7 +24,7 @@ export default function FinancedProjects() {
 
   const projects = [
     {
-      image: '/api/placeholder/400/250',
+      image: 'https://picsum.photos/seed/agriculture/400/250',
       status: 'Active',
       icon: (
         <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,7 +39,7 @@ export default function FinancedProjects() {
       partners: 'Mercy Corps & FAO'
     },
     {
-      image: '/api/placeholder/400/250',
+      image: 'https://picsum.photos/seed/women-business/400/250',
       status: 'Active',
       icon: (
         <svg className="w-6 h-6 text-[#6A3E9F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ export default function FinancedProjects() {
       partners: 'UN Women & JOA'
     },
     {
-      image: '/api/placeholder/400/250',
+      image: 'https://picsum.photos/seed/housing/400/250',
       status: 'Active',
       icon: (
         <svg className="w-6 h-6 text-[#6A3E9F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,7 +71,7 @@ export default function FinancedProjects() {
       partners: 'UN-Habitat & Ministry of Urban Development'
     },
     {
-      image: '/api/placeholder/400/250',
+      image: 'https://picsum.photos/seed/water/400/250',
       status: 'Active',
       icon: (
         <svg className="w-6 h-6 text-[#6A3E9F]" fill="currentColor" viewBox="0 0 24 24">
@@ -86,7 +86,7 @@ export default function FinancedProjects() {
       partners: 'African Development Bank & UNICEF'
     },
     {
-      image: '/api/placeholder/400/250',
+      image: 'https://picsum.photos/seed/solar/400/250',
       status: 'Active',
       icon: (
         <svg className="w-6 h-6 text-[#6A3E9F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,7 +101,7 @@ export default function FinancedProjects() {
       partners: 'Global Green Fund & Power Africa'
     },
     {
-      image: '/api/placeholder/400/250',
+      image: 'https://picsum.photos/seed/relief/400/250',
       status: 'Active',
       icon: (
         <svg className="w-6 h-6 text-[#6A3E9F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -116,7 +116,7 @@ export default function FinancedProjects() {
       partners: 'JOA (Joint Operations Addis) & Red Crescent'
     },
     {
-      image: '/api/placeholder/400/250',
+      image: 'https://picsum.photos/seed/sme/400/250',
       status: 'Active',
       icon: (
         <svg className="w-6 h-6 text-[#6A3E9F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -131,7 +131,7 @@ export default function FinancedProjects() {
       partners: 'IFC & Ethiopian Chamber of Commerce'
     },
     {
-      image: '/api/placeholder/400/250',
+      image: 'https://picsum.photos/seed/youth/400/250',
       status: 'Active',
       icon: (
         <svg className="w-6 h-6 text-[#6A3E9F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -148,7 +148,7 @@ export default function FinancedProjects() {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-[#F8F8F8]">
+    <section id="agri-finance" className="py-16 lg:py-24 bg-[#F8F8F8]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -185,8 +185,12 @@ export default function FinancedProjects() {
             <div key={index} className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm">
               {/* Image with Status Tag */}
               <div className="relative">
-                <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
-                  <span className="text-gray-400">Project Image</span>
+                <div className="w-full h-48 bg-gray-200 relative">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="absolute top-4 right-4">
                   <span className="bg-[#6A3E9F] text-white px-3 py-1 rounded text-xs font-medium">

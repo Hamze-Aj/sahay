@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function SahaypayDigitalWallet() {
   return (
-    <section className="bg-white py-16 lg:py-24">
+    <section id="sahaypay" className="bg-white py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -24,12 +24,10 @@ export default function SahaypayDigitalWallet() {
           {/* Image Container */}
           <div className="relative rounded-xl overflow-hidden shadow-2xl">
             <div className="w-full h-[500px] lg:h-[600px] relative">
-              <Image
-                src="/sahaypay-wallet.jpg"
+              <img
+                src="https://picsum.photos/seed/wallet-app/800/600"
                 alt="Sahaypay Digital Wallet"
-                fill
-                className="object-cover"
-                priority
+                className="w-full h-full object-cover"
               />
             </div>
 

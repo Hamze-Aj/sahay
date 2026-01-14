@@ -21,7 +21,7 @@ export default function CustomerSuccessStories() {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section id="success-stories" className="py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Title */}
         <h2 className="text-3xl lg:text-4xl font-bold text-[#333333] text-center mb-12">
