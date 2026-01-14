@@ -6,11 +6,16 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const dropdownRef = useRef(null);
+  const mobileMenuRef = useRef(null);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        (!mobileMenuRef.current || !mobileMenuRef.current.contains(event.target))
+      ) {
         setOpenDropdown(null);
       }
     }
@@ -155,7 +160,7 @@ export default function Navigation() {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-white z-40 pt-24 px-6 overflow-y-auto">
+        <div ref={mobileMenuRef} className="lg:hidden fixed inset-0 bg-white z-40 pt-24 px-6 overflow-y-auto">
           <div className="flex flex-col space-y-4">
             {menuItems.map((item) => (
               <div key={item.name} className="border-b border-gray-100 pb-4">
