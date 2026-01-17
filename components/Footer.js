@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Footer() {
   return (
     <footer id="contact" className="bg-[#020617] text-white pt-16 pb-8 border-t border-gray-800">
@@ -9,14 +11,14 @@ export default function Footer() {
           {/* Brand Column (Left) */}
           <div className="lg:col-span-5 space-y-8">
             {/* Logo Area */}
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-[#4CAF50] rounded-lg flex items-center justify-center">
-                <span className="font-bold text-white text-sm">RMFI</span>
-              </div>
-              <div>
-                <h3 className="font-bold text-lg leading-tight">Rays Microfinance</h3>
-                <p className="text-[#FFC107] text-sm">Shariah-Compliant Banking</p>
-              </div>
+            <div className="inline-block bg-white p-4 rounded-xl">
+              <Image
+                src="/logo-full.png"
+                alt="Rays Microfinance"
+                width={400}
+                height={130}
+                className="h-32 w-auto object-contain"
+              />
             </div>
 
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">

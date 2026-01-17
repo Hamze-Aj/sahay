@@ -8,6 +8,7 @@ export default function DigitalSolutions() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
       ),
+      id: 'mobile-banking',
       title: 'Digital wallet Revolution',
       description: "Ethiopia's most trusted mobile wallet for instant transfers, bill payments, and merchant transactions.",
       capabilities: [
@@ -24,6 +25,7 @@ export default function DigitalSolutions() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
         </svg>
       ),
+      id: 'murabaha',
       title: 'Digital Islamic Financing',
       description: 'Instant online Murabaha financing with digital approval, transparent terms, and seamless disbursement.',
       capabilities: [
@@ -37,7 +39,7 @@ export default function DigitalSolutions() {
   ];
 
   return (
-    <section className="bg-white py-16 lg:py-24">
+    <section id="digital-solutions" className="bg-white py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -48,26 +50,26 @@ export default function DigitalSolutions() {
             Cutting-edge technology platform designed to deliver seamless banking experiences
           </p>
         </div>
-        
+
         {/* Solution Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {solutions.map((solution, index) => (
-            <div key={index} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+            <div key={index} id={solution.id} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 scroll-mt-24">
               {/* Icon */}
               <div className="w-12 h-12 bg-[#4CAF50] rounded-lg flex items-center justify-center mb-6">
                 {solution.icon}
               </div>
-              
+
               {/* Title */}
               <h3 className="text-2xl lg:text-3xl font-bold text-[#333333] mb-4">
                 {solution.title}
               </h3>
-              
+
               {/* Description */}
               <p className="text-base text-[#333333] mb-6 leading-relaxed">
                 {solution.description}
               </p>
-              
+
               {/* Key Capabilities */}
               <div className="mb-8">
                 <h4 className="text-sm font-semibold text-[#333333] mb-3">Key Capabilities:</h4>
@@ -80,7 +82,7 @@ export default function DigitalSolutions() {
                   ))}
                 </ul>
               </div>
-              
+
               {/* Call-to-Action Buttons */}
               <div className="flex gap-4">
                 <button className="bg-[#FFC107] text-white px-6 py-3 rounded-lg font-medium text-base flex-1">

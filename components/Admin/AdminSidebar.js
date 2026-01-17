@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useAuth } from '../../context/AuthContext';
+import Image from 'next/image';
 
 export default function AdminSidebar({ isOpen, onClose }) {
     const pathname = usePathname();
@@ -35,8 +36,8 @@ export default function AdminSidebar({ isOpen, onClose }) {
                     {/* Sidebar Header */}
                     <div className="p-6 border-b border-gray-50 flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-[#00A651] rounded flex items-center justify-center flex-shrink-0">
-                                <span className="text-white font-bold text-xs">RMFI</span>
+                            <div className="w-20 h-20 flex items-center justify-center flex-shrink-0">
+                                <Image src="/logo-symbol.png" alt="RMFI" width={80} height={80} className="w-full h-full object-contain" />
                             </div>
                             <div>
                                 <h1 className="font-bold text-gray-800 text-sm">Admin Panel</h1>

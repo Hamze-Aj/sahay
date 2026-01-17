@@ -18,6 +18,7 @@ export default function BankingTechnology() {
       ]
     },
     {
+      id: 'wallet-system',
       icon: (
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -38,6 +39,7 @@ export default function BankingTechnology() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </svg>
       ),
+      id: 'digital-loan',
       title: 'Digital Lending System',
       subtitle: 'AI-Powered Loan Management',
       description: 'End-to-end digital lending platform with automated credit scoring, instant loan approvals, and comprehensive portfolio management for personal and business loans.',
@@ -50,7 +52,7 @@ export default function BankingTechnology() {
   ];
 
   return (
-    <section className="bg-white py-16 lg:py-24">
+    <section id="core-banking" className="bg-white py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -108,7 +110,7 @@ export default function BankingTechnology() {
         {/* Solutions Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
           {solutions.map((solution, index) => (
-            <div key={index} className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm">
+            <div key={index} id={solution.id} className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm scroll-mt-24">
               {/* Icon */}
               <div className="w-12 h-12 bg-[#6A3E9F] rounded-lg flex items-center justify-center mb-6">
                 {solution.icon}

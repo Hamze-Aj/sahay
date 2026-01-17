@@ -45,10 +45,10 @@ export default function Statistics() {
   ];
 
   return (
-    <section className="relative bg-[#F8F8F8] py-16 lg:py-24 overflow-hidden">
+    <section id="impact" className="relative bg-[#F8F8F8] py-16 lg:py-24 overflow-hidden">
       {/* Decorative Yellow Circle */}
       <div className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/4 w-48 h-48 bg-[#FFC107] rounded-full opacity-20"></div>
-      
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {stats.map((stat, index) => (

@@ -19,7 +19,7 @@ export default function TrustedPartners() {
   ];
 
   return (
-    <section id="our-reach" className="py-16 lg:py-24 bg-[#F8F8F8]">
+    <section id="partners" className="py-16 lg:py-24 bg-[#F8F8F8]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-12">
