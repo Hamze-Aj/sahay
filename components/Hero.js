@@ -11,7 +11,7 @@ export default function Hero() {
         {/* Main Heading */}
         <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight">
           <span className="text-[#333333] block">Empowering Communities</span>
-          <span className="text-[#6A3E9F] block mt-2">Through Ethical Finance</span>
+          <span className="text-primary block mt-2">Through Ethical Finance</span>
         </h1>
 
         {/* Description */}

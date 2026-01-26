@@ -163,18 +163,18 @@ export default function Navigation() {
                 {item.hasDropdown ? (
                   <button
                     onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center gap-1.5 text-[#333333] text-sm font-normal hover:text-[#4CAF50] transition-colors py-2 outline-none focus:outline-none"
+                    className="flex items-center gap-1.5 text-[#333333] text-sm font-normal hover:text-primary transition-colors py-2 outline-none focus:outline-none"
                   >
-                    <item.icon className="w-4 h-4 text-[#6A3E9F]" />
+                    <item.icon className="w-4 h-4 text-primary" />
                     {item.name}
                     <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${openDropdown === item.name ? 'rotate-180' : ''}`} />
                   </button>
                 ) : (
                   <a
                     href={item.href}
-                    className="flex items-center gap-1.5 text-[#333333] text-sm font-normal hover:text-[#4CAF50] transition-colors py-2"
+                    className="flex items-center gap-1.5 text-[#333333] text-sm font-normal hover:text-primary transition-colors py-2"
                   >
-                    <item.icon className="w-4 h-4 text-[#6A3E9F]" />
+                    <item.icon className="w-4 h-4 text-primary" />
                     {item.name}
                   </a>
                 )}
@@ -196,7 +196,7 @@ export default function Navigation() {
                           <div className="flex items-center gap-3">
                             {subItem.icon && (
                               <div className="p-1.5 bg-gray-50 rounded-lg group-hover:bg-white group-hover:shadow-sm transition-all">
-                                <subItem.icon className="w-4 h-4 text-[#6A3E9F]" />
+                                <subItem.icon className="w-4 h-4 text-primary" />
                               </div>
                             )}
                             <div className="flex items-center gap-2">
@@ -206,7 +206,7 @@ export default function Navigation() {
                                 </span>
                               )}
                               <div className="flex flex-col">
-                                <span className="text-[15px] font-medium text-[#333333] group-hover:text-[#4CAF50] transition-colors leading-tight">
+                                <span className="text-[15px] font-medium text-[#333333] group-hover:text-primary transition-colors leading-tight">
                                   {subItem.label}
                                 </span>
                                 {subItem.description && (
@@ -218,7 +218,7 @@ export default function Navigation() {
                             </div>
                           </div>
                           {subItem.subItems && (
-                            <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#4CAF50]" />
+                            <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-primary" />
                           )}
                         </a>
 
@@ -233,10 +233,10 @@ export default function Navigation() {
                               >
                                 {nestedItem.icon && (
                                   <div className="p-1.5 bg-gray-50 rounded-lg group-hover:bg-white group-hover:shadow-sm transition-all">
-                                    <nestedItem.icon className="w-4 h-4 text-[#6A3E9F]" />
+                                    <nestedItem.icon className="w-4 h-4 text-primary" />
                                   </div>
                                 )}
-                                <span className="text-sm font-medium text-[#333333] group-hover:text-[#4CAF50] transition-colors">
+                                <span className="text-sm font-medium text-[#333333] group-hover:text-primary transition-colors">
                                   {nestedItem.label}
                                 </span>
                               </a>
@@ -256,7 +256,7 @@ export default function Navigation() {
             {/* Sign In Button (Hidden on Mobile) */}
             <div className="hidden lg:block">
               <a href="/login">
-                <Button variant="green" className="px-6 py-2.5 text-sm">
+                <Button variant="primary" className="px-6 py-2.5 text-sm">
                   Sign In / Register
                 </Button>
               </a>
@@ -293,7 +293,7 @@ export default function Navigation() {
                     onClick={() => toggleDropdown('mobile-' + item.name)}
                   >
                     <div className="flex items-center gap-2">
-                      <item.icon className="w-5 h-5 text-[#6A3E9F]" />
+                      <item.icon className="w-5 h-5 text-primary" />
                       {item.name}
                     </div>
                     <ChevronDown className={`w-5 h-5 transition-transform ${openDropdown === 'mobile-' + item.name ? 'rotate-180' : ''}`} />
@@ -305,7 +305,7 @@ export default function Navigation() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <div className="flex items-center gap-2">
-                      <item.icon className="w-5 h-5 text-[#6A3E9F]" />
+                      <item.icon className="w-5 h-5 text-primary" />
                       {item.name}
                     </div>
                   </a>
@@ -326,7 +326,7 @@ export default function Navigation() {
                                 <a
                                   key={nestedItem.label}
                                   href={nestedItem.href}
-                                  className="text-gray-500 hover:text-[#4CAF50] text-sm py-1"
+                                  className="text-gray-500 hover:text-primary text-sm py-1"
                                   onClick={() => setMobileMenuOpen(false)}
                                 >
                                   {nestedItem.label}
@@ -337,7 +337,7 @@ export default function Navigation() {
                         ) : (
                           <a
                             href={subItem.href}
-                            className="text-gray-500 hover:text-[#4CAF50] text-base py-1"
+                            className="text-gray-500 hover:text-primary text-base py-1"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {subItem.label}
@@ -352,7 +352,7 @@ export default function Navigation() {
 
             <div className="pt-4 pb-8">
               <a href="/login" className="flex w-full">
-                <Button variant="green" className="w-full py-3 justify-center text-base">
+                <Button variant="primary" className="w-full py-3 justify-center text-base">
                   Sign In / Register
                 </Button>
               </a>

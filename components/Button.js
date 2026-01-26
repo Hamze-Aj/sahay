@@ -11,8 +11,8 @@ export default function Button({
   const baseClasses = 'px-8 py-3.5 rounded-lg font-medium text-base inline-flex justify-center items-center';
 
   const variants = {
-    primary: 'bg-[#6A3E9F] text-white',
-    secondary: 'bg-white text-[#6A3E9F] border-2 border-[#6A3E9F]',
+    primary: 'bg-primary text-white',
+    secondary: 'bg-white text-primary border-2 border-primary',
     green: 'bg-[#4CAF50] text-white hover:bg-[#45a049] transition-colors'
   };
 

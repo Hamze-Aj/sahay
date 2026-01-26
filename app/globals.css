@@ -4,6 +4,7 @@
   --background: #ffffff;
   --foreground: #333333;
   --purple: #6A3E9F;
+  --primary: var(--purple);
   --green: #4CAF50;
   --yellow: #FFC107;
   --light-purple: #E0D9EB;
@@ -13,6 +14,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
